@@ -9,7 +9,7 @@ var expressValidator = require('express-validator');
 var flash = require('connect-flash');
 var session = require('express-session');
 var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
+var LocalStrategy = require('passport-local'),Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 
@@ -44,20 +44,20 @@ app.use(passport.session());
 
 // Express Validator
 app.use(expressValidator({
-    errorFormatter: function(param, msg, value) {
-        var namespace = param.split('.')
-        , root  = namespace.shift()
-        , formParam = root;
+  errorFormatter: function(param, msg, value) {
+    var namespace = param.split('.')
+		, root  = namespace.shift()
+		, formParam = root;
 
-      while(namespace.length) {
-        formParam += '[' + namespace shift() + ']';
-      }
-      return {
+    while(namespace.length) {
+        formParam += '[' + namespace.shift() + ']';
+    }
+    return {
         param : formParam,
         msg : msg,
         value : value
-      };
-    }
+    };
+	}
 }));
 
 // Connect-Flash

@@ -16,6 +16,7 @@
     "bcryptjs": "*",
     "passport": "*",
     "passport-http": "*",
+    "passport-local": "*",
     "mongodb": "*",
     "mongoose": "*",
     "express-session": "*",
