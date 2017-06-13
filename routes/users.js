@@ -81,7 +81,7 @@ router.post('/register', function(req, res, next) {
         username: username
       });
 
-      User.saveInsructort(newUser, newInstructor, function(err, user) {
+      User.saveInstructor(newUser, newInstructor, function(err, user) {
         console.log('Instructor created');
       });
     }
