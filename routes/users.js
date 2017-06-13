@@ -86,7 +86,7 @@ router.post('/register', function(req, res, next) {
       });
     }
 
-    req.flash('success', 'User Added');
+    req.flash('success_msg', 'User Added');
     res.redirect('/');
   }
 });
