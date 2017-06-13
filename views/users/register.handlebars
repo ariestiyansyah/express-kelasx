@@ -1,4 +1,11 @@
 <h2>Create an Account</h2>
+{{#if errors}}
+    {{#each errors}}
+        <div class="">
+            {{msg}}
+        </div>
+    {{/each}}
+{{/if}}
 <form id="regForm" method="POST" action="/users/register"></form>
 <div>
     <label for="">Account Type</label>
