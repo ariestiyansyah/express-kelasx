@@ -72,7 +72,9 @@ app.use(flash());
 
 // Global Vars
 app.use(function (req, res, next) {
-    res.locals.messages = require('express-messages')(req, res);
+    res.locals.succes_msg = req.flash('success_msg');
+	res.locals.error_msg = req.flash('error_msg');
+	res.locals.error = req.flash('error');
     next();
 });
 

@@ -30,6 +30,12 @@
                 <a href="#close" class="icon-remove"></a>
         </div>
     {{/if}}
+    {{#if error}}
+        <div class="notice error"><i class="icon-remove-sign icon-large"></i>
+            {{error}}
+                <a href="#close" class="icon-remove"></a>
+        </div>
+    {{/if}}
 	{{{body}}}
 	</div>
 	
